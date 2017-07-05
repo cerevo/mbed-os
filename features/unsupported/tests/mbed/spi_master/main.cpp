@@ -41,6 +41,9 @@ DigitalOut cs(PA17);
 #elif defined(TARGET_SAMG55J19)
 SPI spi(PA10, PA09, PB00, PA25);   // mosi, miso, sclk  cs
 DigitalOut cs(PA25);
+#elif defined(TARGET_BLUENINJA_CDP_TZ01B)
+SPI spi(PE6, PE7, PE5);
+DigitalOut cs(PE4);
 #else
 SPI spi(p5, p6, p7); // mosi, miso, sclk
 DigitalOut cs(p8);

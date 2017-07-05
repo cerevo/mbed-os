@@ -1,0 +1,24 @@
+{
+  "name": "tz10xx-twic",
+  "version": "1.41.0",
+  "description": "Middleware for Toshiba tz10xx MCUs",
+  "keywords": [
+    "mbed",
+    "hal",
+    "tz10xx",
+    "toshiba",
+    "mbed-official"
+  ],
+  "author": "TOSHIBA",
+  "licenses": [
+    {
+      "url": "https://spdx.org/licenses/Apache-2.0",
+      "type": "Apache-2.0"
+    }
+  ],
+  "extraIncludes": [
+    "source",
+    "source/Config"
+  ],
+  "targetDependencies": {}
+}

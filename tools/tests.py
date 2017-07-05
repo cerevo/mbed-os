@@ -428,7 +428,7 @@ TESTS = [
         "id": "MBED_4", "description": "Sleep",
         "source_dir": join(TEST_DIR, "mbed", "sleep"),
         "dependencies": [MBED_LIBRARIES, TEST_MBED_LIB],
-        "mcu": ["LPC1768", "LPC11U24", "LPC4088","LPC4088_DM","NRF51822", "LPC11U68"]
+        "mcu": ["LPC1768", "LPC11U24", "LPC4088","LPC4088_DM","NRF51822", "LPC11U68", "BLUENINJA_CDP_TZ01B"]
     },
     {
         "id": "MBED_5", "description": "PWM",
@@ -673,7 +673,7 @@ TESTS = [
     },
     {
         "id": "USB_3", "description": "Mouse_Keyboard",
-        "source_dir": join(TEST_DIR, "usb", "device", "keyboard"),
+        "source_dir": join(TEST_DIR, "usb", "device", "mouse_keyboard"),
         "dependencies": [MBED_LIBRARIES, USB_LIBRARIES],
     },
     {

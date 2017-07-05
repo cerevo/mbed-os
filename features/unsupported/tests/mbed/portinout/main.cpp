@@ -211,6 +211,15 @@
 #define P2_2    (1 << 1)  /*P5_1*/
 #define PORT_2  Port5
 
+#elif defined(TARGET_BLUENINJA_CDP_TZ01B)
+#define P1_1    (1 << 2)   /* GPIO_18 */
+#define P1_2    (1 << 3)   /* GPIO_19 */
+#define PORT_1  Gpio_Port2
+
+#define P2_1    (1 << 0)   /* GPIO_8 */
+#define P2_2    (1 << 1)   /* GPIO_9 */
+#define PORT_2  Gpio_Port1
+
 #else
 #error [NOT_SUPPORTED] This test is not defined on this target
 #endif

@@ -37,6 +37,8 @@
     #define STACK_SIZE 1536
 #elif defined(TARGET_MCU_NRF51822)
     #define STACK_SIZE 768
+#elif defined(TARGET_BLUENINJA_CDP_TZ01B)
+    #define STACK_SIZE 512
 #else
     #define STACK_SIZE DEFAULT_STACK_SIZE
 #endif

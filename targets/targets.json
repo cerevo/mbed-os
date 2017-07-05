@@ -3003,5 +3003,20 @@
         "device_has": ["ANALOGIN", "ERROR_PATTERN", "I2C", "I2C_ASYNCH", "INTERRUPTIN", "LOWPOWERTIMER", "PORTIN", "PORTINOUT", "PORTOUT", "PWMOUT", "RTC", "SERIAL", "SERIAL_ASYNCH", "SERIAL_FC", "SLEEP", "SPI", "SPI_ASYNCH", "SPISLAVE"],
         "release_versions": ["2"],
         "device_name": "nRF51822_xxAC"
+    },
+    "BLUENINJA_CDP_TZ01B": {
+        "inherits": ["Target"],
+        "core": "Cortex-M4F",
+        "extra_labels": ["TOSHIBA", "TZ10XX", "MCU_TZ10XX","BLUENINJA_CDP_TZ01B"],
+        "macros": ["USE_TZ10XX_BOOT_FLASH", "CMSIS_VECTAB_VIRTUAL", "CMSIS_VECTAB_VIRTUAL_HEADER_FILE=\"cmsis_nvic.h\""],
+        "supported_toolchains": ["ARM", "GCC_ARM", "IAR"],
+        "default_toolchain": "ARM",
+        "device_has": ["ANALOGIN", "ERROR_PATTERN", "I2C", "INTERRUPTIN", "PORTIN", "PORTINOUT", "PORTOUT", "PWMOUT", "RTC", "SERIAL", "SERIAL_FC", "SLEEP", "SPI", "LOWPOWERTIMER"],
+        "detect_code": ["7010"],
+        "device_name": "TZ10XX",
+        "is_disk_virtual": true,
+        "features": ["BLE"],
+        "forced_reset_timeout": 2,
+        "release_versions": ["2", "5"]
     }
 }

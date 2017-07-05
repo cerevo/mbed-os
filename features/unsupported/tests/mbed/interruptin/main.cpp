@@ -110,6 +110,10 @@ void in_handler() {
 #define PIN_OUT    PA13
 #define PIN_IN     PB13
 
+#elif defined(TARGET_BLUENINJA_CDP_TZ01B)
+#define PIN_OUT    PA7
+#define PIN_IN     PA8
+
 #else
 #define PIN_IN      (p5)
 #define PIN_OUT     (p25)

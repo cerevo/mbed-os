@@ -15,6 +15,8 @@
 #define TIMER_IRQ       TC4_IRQn
 #elif defined(TARGET_SAML21J18A)
 #define TIMER_IRQ       TC0_IRQn
+#elif defined(TARGET_BLUENINJA_CDP_TZ01B)
+#define TIMER_IRQ       TMR1_IRQn
 #else
 #error [NOT_SUPPORTED] This test can't run on this target.
 #endif
@@ -50,6 +52,8 @@ Sender s2(pc, '2');
 #   define LED_NAME LED2
 #elif defined(TARGET_SAMR21G18A) || defined(TARGET_SAMD21J18A) || defined(TARGET_SAMD21G18A) || defined(TARGET_SAML21J18A) /*to avoid build errors*/
 #   define LED_NAME LED2  /*Only 1 LED available*/
+#elif defined(TARGET_BLUENINJA_CDP_TZ01B)
+#   define LED_NAME LED2
 #else
 #   define LED_NAME PTE31
 #endif

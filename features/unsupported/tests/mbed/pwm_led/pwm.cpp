@@ -36,6 +36,9 @@
 #elif defined(TARGET_SAMG55J19)
 #define TEST_LED PA01 /*LED in board doesnt have PWM functionality*/
 
+#elif defined(TARGET_BLUENINJA_CDP_TZ01B)
+#define TEST_LED LED1
+
 #else
   #error [NOT_SUPPORTED] This test is not supported on this target
 #endif

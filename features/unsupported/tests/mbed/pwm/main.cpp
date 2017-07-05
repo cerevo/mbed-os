@@ -196,6 +196,10 @@ int main() {
     printf("Initialize PWM on pin PA01 with duty cycle: %.2f\n", result);
 
     notify_completion(result == value ? true : false);
+#elif defined(TARGET_BLUENINJA_CDP_TZ01B)
+    PwmOut pwm_1(PA10); /* LED 2 */
+    pwm_1.write(0.25);	/* Write 0.25 to clearly see the difference */
+    printf("Initialize PWM on pin PA.10 with duty cycle: %.2f\n", pwm_1.read());
 #else
 #error [NOT_SUPPORTED] This test is not supported on this target.
 #endif

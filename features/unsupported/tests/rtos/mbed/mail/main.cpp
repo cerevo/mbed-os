@@ -32,6 +32,8 @@ typedef struct {
     #define STACK_SIZE 768
 #elif (defined(TARGET_STM32F070RB) || defined(TARGET_STM32F072RB))
     #define STACK_SIZE DEFAULT_STACK_SIZE/2
+#elif defined(TARGET_BLUENINJA_CDP_TZ01B)
+    #define STACK_SIZE 512
 #else
     #define STACK_SIZE DEFAULT_STACK_SIZE
 #endif

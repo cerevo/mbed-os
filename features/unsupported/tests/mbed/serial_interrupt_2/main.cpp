@@ -10,6 +10,8 @@ Serial uart(P0_1, P0_0);
 Serial uart(PA16, PA17);
 #elif defined(TARGET_SAMG55J19)
 Serial uart(PB10, PB11);
+#elif defined(TARGET_BLUENINJA_CDP_TZ01B)
+Serial uart(PD1, PD0);
 #else
 Serial uart(p9, p10);
 #endif

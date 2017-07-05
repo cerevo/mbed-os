@@ -21,6 +21,10 @@ BusOut bus2(A5, A4, A3, A2, A1, A0);
 BusOut bus1(PA18, PA17, PA25, PA26, PA23, PA00, PA29, PA24, PA10, PA09, PA13, PA11, PA14);
 BusOut bus2(PB00, PB01, PB08, PB09, PB10, PB11, PB14);
 
+#elif defined(TARGET_BLUENINJA_CDP_TZ01B)
+BusOut bus1(PA7, PA8, PA9, PE4, PE5, PE6, PE7);
+BusOut bus2(PE3, PE2, PE1, PE0);
+
 #else
 #error [NOT_SUPPORTED] This test is not supported on this target
 

@@ -4,6 +4,8 @@
 DigitalOut out(PB02);
 if defined(TARGET_SAMG55J19)
 DigitalOut out(PA17);
+#elif defined(TARGET_BLUENINJA_CDP_TZ01B)
+DigitalOut out(PA11);
 #else
 DigitalOut out(p5);
 #endif

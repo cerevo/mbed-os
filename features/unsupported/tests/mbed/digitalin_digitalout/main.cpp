@@ -76,6 +76,10 @@ DigitalIn  in(PA17);
 DigitalOut out(P3_2);
 DigitalIn  in(P5_6);
 
+#elif defined(TARGET_BLUENINJA_CDP_TZ01B)
+DigitalOut out(PA7);
+DigitalIn  in(PA8);
+
 #else
 DigitalOut out(p5);
 DigitalIn in(p25);

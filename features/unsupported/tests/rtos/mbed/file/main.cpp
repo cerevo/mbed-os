@@ -39,6 +39,9 @@ void sd_thread(void const *argument)
 #elif defined(TARGET_NUMAKER_PFM_M453)
     SDFileSystem sd(PD_13, PD_14, PD_15, PD_12, "sd");
 
+#elif defined(TARGET_BLUENINJA_CDP_TZ01B)
+    SDFileSystem sd(PE6, PE7, PE5, PE4, "sd"); /* mosi, miso, clock, ss */
+
 #else
     SDFileSystem sd(p11, p12, p13, p14, "sd");
 #endif

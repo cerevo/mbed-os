@@ -58,6 +58,12 @@
 #     define LED2       0
 #     define LED3       0
 #     define LED4       0
+# elif defined(TARGET_BLUENINJA_CDP_TZ01B)
+#     define LED_PORT   Gpio_Port1
+#     define LED1       (1 << 2) /* PA11 */
+#     define LED2       (1 << 3) /* PA10 */
+#     define LED3        0
+#     define LED4        0
 # else
   #error [NOT_SUPPORTED] This test can't be ran on this target
 #endif

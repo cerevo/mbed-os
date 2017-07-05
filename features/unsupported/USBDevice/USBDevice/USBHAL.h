@@ -91,7 +91,7 @@ protected:
     virtual bool EP2_IN_callback(){return false;};
     virtual bool EP3_OUT_callback(){return false;};
     virtual bool EP3_IN_callback(){return false;};
-#if !defined(TARGET_STM32F4)
+#if !defined(TARGET_STM32F4) || defined(TARGET_BLUENINJA_CDP_TZ01B)
     virtual bool EP4_OUT_callback(){return false;};
     virtual bool EP4_IN_callback(){return false;};
 #if !(defined(TARGET_LPC11UXX) || defined(TARGET_LPC11U6X) || defined(TARGET_LPC1347) || defined(TARGET_LPC1549))
@@ -128,7 +128,7 @@ private:
 
 #if defined(TARGET_LPC11UXX) || defined(TARGET_LPC11U6X) || defined(TARGET_LPC1347) || defined(TARGET_LPC1549)
     bool (USBHAL::*epCallback[10 - 2])(void);
-#elif (defined(TARGET_STM32F4) && !defined(USB_STM_HAL)) || defined(TARGET_NUMAKER_PFM_M453)
+#elif (defined(TARGET_STM32F4) && !defined(USB_STM_HAL)) || defined(TARGET_NUMAKER_PFM_M453) || defined(TARGET_BLUENINJA_CDP_TZ01B)
     bool (USBHAL::*epCallback[8 - 2])(void);
 #elif defined(TARGET_STM)
     PCD_HandleTypeDef hpcd;

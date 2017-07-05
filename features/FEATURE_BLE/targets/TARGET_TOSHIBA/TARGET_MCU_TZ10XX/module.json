@@ -1,0 +1,28 @@
+{
+  "name": "ble-tz10xx",
+  "version": "1.0.0",
+  "description": "TOSHIBA stack and drivers for the mbed BLE API.",
+  "keywords": [
+    "Bluetooth",
+    "BLE",
+    "mbed",
+    "mbed-official"
+  ],
+  "author": "TOSHIBA",
+  "homepage": "http://toshiba.semicon-storage.com/ap-en/top.html",
+  "licenses": [
+    {
+      "url": "https://spdx.org/licenses/Apache-2.0",
+      "type": "Apache-2.0"
+    }
+  ],
+  "dependencies": {
+    "ble": "^2.6.0",
+    "tz10xx-twic": "1.41.0"
+  },
+  "extraIncludes": [
+    "ble-tz10xx",
+    "ble-tz10xx/btle"
+  ],
+  "targetDependencies": {}
+}

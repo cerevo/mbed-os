@@ -1,0 +1,26 @@
+LR_ROM 0x00000000 {    ; load region size_region
+  ER_BOOT 0x00000000 {  ; load address = execution address
+   bootloader*.o (BOOTSTRAP, +First)
+   bootloader*.o
+  }
+  ER_FWCOPIER +0 {
+   fwcopier_tz1*.o
+  }
+  ER_ROM_RSVD +0 FILL 0xFFFFFFFF (0x8000-ImageLength(ER_BOOT)-ImageLength(ER_FWCOPIER))
+  {
+  }
+  ER_STARTUP 0x10000000 0x300 {
+   startup_TZ10xx.o (RESET, +First)
+   startup_TZ10xx.o
+   system_TZ10xx.o
+  }
+  ER_IROM1 +0 {
+   .ANY (+RO)
+  }
+  ER_ROOT (0x8000+ImageLength(ER_STARTUP)+ImageLength(ER_IROM1)) {  ; load address = execution address
+   *(InRoot$$Sections)
+  }
+  RW_IRAM1 0x20000000 0x8000 {  ; RW data
+   .ANY (+RW +ZI)
+  }
+}

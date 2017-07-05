@@ -18,6 +18,8 @@ InterruptIn wkp(PA15);
 InterruptIn wkp(PB23);
 #elif defined(TARGET_SAML21J18A)
 InterruptIn wkp(PA02);
+#elif defined(TARGET_BLUENINJA_CDP_TZ01B)
+InterruptIn wkp(PA6);
 #else
 InterruptIn wkp(p14);
 #endif
